@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ถอนรายวิชา</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Sarabun', sans-serif;
+    }
+    body {
+      background-image: url("4k-nightreign-wallpaper-v0-pfccw9ud3j6e1.webp");
+      background-size: cover;
+      background-position: center;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .form-box {
+      background: white;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.05);
+      width: 100%;
+      max-width: 440px;
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    label {
+      font-weight: 600;
+      display: block;
+      margin-top: 12px;
+      color: #333;
+    }
+    input, select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-top: 4px;
+      margin-bottom: 12px;
+    }
+    input:focus, select:focus {
+      border-color: #4aa3df;
+      outline: none;
+    }
+    .checkbox-label {
+      display: flex;
+      align-items: center;
+      margin-top: 8px;
+    }
+    .checkbox-label input {
+      width: auto;
+      margin-right: 8px;
+    }
+    button {
+      width: 100%;
+      background: #4aa3df;
+      border: none;
+      color: white;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 16px;
+    }
+    button:hover {
+      background: #2c90d1;
+    }
+    #error {
+      margin-top: 16px;
+      color: red;
+      white-space: pre-line;
+    }
+  </style>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="form-box">
+    <h2>ถอนรายวิชา</h2>
+    <form id="dropForm">
+      <label for="subject">เลือกรายวิชา</label>
+      <select id="subject">
+        <option value="">-- กรุณาเลือกรายวิชา --</option>
+        <option value="cobol">Cobol Programming</option>
+        <option value="stat">Statistic</option>
+        <option value="ml">Machine Learning</option>
+      </select>
+
+      <label for="username">ชื่อผู้ใช้</label>
+      <input type="text" id="username" />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" />
+
+      <label for="password">รหัสผ่าน</label>
+      <input type="password" id="password" />
+
+      <label class="checkbox-label">
+        <input type="checkbox" id="agree" />
+        ข้าพเจ้ายอมรับเงื่อนไขการถอนรายวิชา
+      </label>
+
+      <button type="submit">Drop รายวิชา</button>
+      <p id="error"></p>
+    </form>
+  </div>
+</body>
+</html>
